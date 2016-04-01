@@ -60,8 +60,8 @@ $(document).ready(function(){
        (pFromRow - pToRow === 1) && (pieceToTake !== "empty") ) {
 
       console.log("the piece in the destination space is: ", pieceToTake);
-     legalMoveFoundNowMovePiece();
-     return;
+      legalMoveFoundNowMovePiece();
+      return;
 
     }
 
@@ -73,6 +73,7 @@ $(document).ready(function(){
 
 
     // Moving forward case
+
     /* NOTE:  Needs update for case where its the first move, moving forward two
       spaces, but there is a piece in front of you.  ILLEGAL! The code currently
       will allow this because it only checks for a piece at the destination.
@@ -116,6 +117,7 @@ $(document).ready(function(){
     //pieceToMove = clickedObj.td.find( "span" ); // the actual piece
     pieceToMove = clickedObj.span;
     console.log("\n\n The piece to move is: ", pieceToMove);
+
     // myClass = clickedObj.td.find( "span" ).attr("class"); // get the class of the piece
     myClass = pieceToMove.attr("class");
 
